@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION["usuario"])) {
+  header("location:/");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,6 +41,15 @@ session_start();
 </head>
 
 <style>
+  progress {
+    appearance: auto;
+    width: 20%;
+    border-radius: 10px;
+    inline-size: 5em;
+    border-radius: 5px;
+   
+  }
+
   /* Estilo para centralizar o conteúdo */
   body {
     display: flex;
@@ -329,15 +341,43 @@ session_start();
           </thead>
           <tbody>
             <tr>
-              <td>Dado 1</td>
-              <td>Dado 2</td>
-              <td>Dado 3</td>
-              <td>Dado 4</td>
-              <td>Dado 5</td>
-              <td>Dado 6</td>
-              <td>Dado 7</td>
-              <td>Dado 8</td>
-              <td>Dado 9</td>
+              <td>
+              Finalizado
+                <progress value="100" max="100"></progress>
+              </td>
+              <td>
+              Finalizado
+                <progress value="100" max="100"></progress>
+              </td>
+              <td>
+              Finalizado
+                <progress value="100" max="100"></progress>
+              </td>
+              <td>
+              Tempo restante: 26hrs
+                <progress value="52" max="100"></progress>
+              </td>
+              <td>
+              Aguardando
+                <progress value="0" max="100"></progress>
+              </td>
+              <td>
+              Aguardando
+                <progress value="0" max="100"></progress>
+              </td>
+              <td>
+              Aguardando
+                <progress value="0" max="100"></progress>
+              </td>
+              <td>
+              Aguardando
+                <progress value="0" max="100"></progress>
+              </td>
+              <td>
+              Aguardando
+                <progress value="0" max="100"></progress>
+              </td>
+
               <td><button class="button-custom" onclick="redirecionar()">Parar</button></td>
               <td><button class="button-custom2"
                   onclick="window.location.href='/cervejaria/transferencia-de-producao/'">Avançar</button></td>
