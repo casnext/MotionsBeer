@@ -6,6 +6,7 @@
 	<title>Sistema Motions'Beer</title>
 	<link rel="shortcut icon" type="image/x-icon" href="./imagens/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
 </head>
 
 <style>
@@ -137,6 +138,11 @@
 			</center>
 		</form>
 	</div>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
 </body>
 
 </html>

@@ -196,5 +196,32 @@ session_start();
       <!-- Conteúdo da tabela -->
     </table>
 
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
+
+    <script>
+      function filtrarTabela() {
+        var input, filtro, tabela, linhasTabela, coluna, textoValor;
+        input = document.getElementById("pesquisa");
+        filtro = input.value.toUpperCase();
+        tabela = document.getElementById("tabela-bordados");
+        linhasTabela = tabela.getElementsByTagName("tr");
+        for (var i = 0; i < linhasTabela.length; i++) {
+          coluna = linhasTabela[i].getElementsByTagName("td")[4]; // o número 4 é o índice da coluna "Op"
+          if (coluna) {
+            textoValor = coluna.textContent || coluna.innerText;
+            if (textoValor.toUpperCase().indexOf(filtro) > -1) {
+              linhasTabela[i].style.display = "";
+            } else {
+              linhasTabela[i].style.display = "none";
+            }
+          }
+        }
+      }
+    </script>
+
   </body>
 </html>
